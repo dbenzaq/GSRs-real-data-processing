@@ -312,6 +312,7 @@ Calculate_CI_for_LR <- function(gunshot_values, time_after_shooting_values, resu
 ##             x_exp0: Vector corresponding to a number of GSR found on  a suspect from the non shooter experiment
 ##             start_parameters: Vector corresponding to the start parameters for optimisation.
 ##                               The parameters are for (k, p, lambda, alpha, beta)
+##             max_iter: Number of iteration to perform. Set by default to 80.
 ## return: list. result for the parameters estimation and variance_matrix_result for the corresponding
 ##         Variance matrix by Louis method and numerical derivative (inf_obs attribute)
 estimate_model <- function(x, t, x_exp1=NULL, t_exp1=NULL, x_exp0=NULL,
