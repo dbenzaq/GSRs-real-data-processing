@@ -39,14 +39,17 @@ est.parm <- estimate_model(x=x.real, t=t.real,x_exp1 = x.exp1, t_exp1 = t.exp1)
 # to obstined the estimates use:
 est.parm$result
 
-# for the variance based on Loius method:
-est.parm$variance_matrix_result
-
 # for the variance based on numerical differentation:
 est.parm$inf_obs
 
 # estimation based only on real data. 
 est.parm <- estimate_model(x=x.real, t=t.real)
+
+# for the variance based on Loius method:
+est.parm$variance_matrix_result
+
+# for the variance based on numerical differentation:
+est.parm$inf_obs
 
 # confidence intervals for parameters. 
 # The variance estimate and level of confidence can be changed

@@ -449,7 +449,12 @@ estimate_model <- function(x, t, x_exp1=NULL, t_exp1=NULL, x_exp0=NULL,
   if (iter == max_iter){
     return('Max iteration reach without convergence')
   }
-  return(list(result = result, variance_matrix_result = matrices, inf_obs = inf_obs))
+  if (is.null(x_exp1) & is.null(x_exp0)){
+    return(list(result = result, variance_matrix_result = matrices, inf_obs = inf_obs))
+  } else {
+    return(list(result = result, variance_matrix_result = NA, inf_obs = inf_obs))
+  }
+  
 }
 
 ## Calculating one sided CI for confidence_level (alpha) wich corresponding to lower bound of LR
